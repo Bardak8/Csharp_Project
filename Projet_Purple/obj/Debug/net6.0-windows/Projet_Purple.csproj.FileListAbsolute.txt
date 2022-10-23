@@ -17,3 +17,22 @@ C:\Users\max\Desktop\Projet Purple\Test_form\Projet_Purple\Projet_Purple\obj\Deb
 C:\Users\max\Desktop\Projet Purple\Test_form\Projet_Purple\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.pdb
 C:\Users\max\Desktop\Projet Purple\Test_form\Projet_Purple\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.genruntimeconfig.cache
 C:\Users\max\Desktop\Projet Purple\Test_form\Projet_Purple\Projet_Purple\obj\Debug\net6.0-windows\ref\Projet_Purple.dll
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\bin\Debug\net6.0-windows\Projet_Purple.exe
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\bin\Debug\net6.0-windows\Projet_Purple.deps.json
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\bin\Debug\net6.0-windows\Projet_Purple.runtimeconfig.json
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\bin\Debug\net6.0-windows\Projet_Purple.dll
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\bin\Debug\net6.0-windows\Projet_Purple.pdb
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.csproj.AssemblyReference.cache
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.Form1.resources
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.Form2.resources
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.Properties.Resources.resources
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.csproj.GenerateResource.cache
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.AssemblyInfoInputs.cache
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.AssemblyInfo.cs
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.csproj.CoreCompileInputs.cache
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.dll
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\refint\Projet_Purple.dll
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.pdb
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.genruntimeconfig.cache
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\ref\Projet_Purple.dll

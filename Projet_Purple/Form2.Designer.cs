@@ -28,44 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Timer = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Score = new System.Windows.Forms.Label();
+            this.head = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.head)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Projet_Purple.Properties.Resources.AnyConv_com__abstract_futuristic_landscape_1980s_style_260nw_1139046833;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(878, 490);
+            this.pictureBox1.Size = new System.Drawing.Size(768, 368);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(902, 34);
+            this.button1.Location = new System.Drawing.Point(789, 26);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 92);
+            this.button1.Size = new System.Drawing.Size(108, 69);
             this.button1.TabIndex = 1;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Keypress);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(902, 167);
+            this.button2.Location = new System.Drawing.Point(789, 125);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 89);
+            this.button2.Size = new System.Drawing.Size(108, 67);
             this.button2.TabIndex = 2;
             this.button2.Text = "End";
             this.button2.UseVisualStyleBackColor = true;
@@ -74,9 +81,10 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(902, 308);
+            this.button3.Location = new System.Drawing.Point(789, 231);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 92);
+            this.button3.Size = new System.Drawing.Size(110, 69);
             this.button3.TabIndex = 3;
             this.button3.Text = "Return to menu ";
             this.button3.UseVisualStyleBackColor = true;
@@ -85,57 +93,64 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(551, 497);
+            this.label1.Location = new System.Drawing.Point(482, 373);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 20);
+            this.label1.Size = new System.Drawing.Size(43, 15);
             this.label1.TabIndex = 4;
             this.label1.Text = "Timer :";
             // 
             // Timer
             // 
             this.Timer.AutoSize = true;
-            this.Timer.Location = new System.Drawing.Point(623, 497);
+            this.Timer.Location = new System.Drawing.Point(545, 373);
             this.Timer.Name = "Timer";
-            this.Timer.Size = new System.Drawing.Size(63, 20);
+            this.Timer.Size = new System.Drawing.Size(49, 15);
             this.Timer.TabIndex = 5;
             this.Timer.Text = "00.00.00";
             // 
-            // label2
+            // Score
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(218, 497);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Score : ";
+            this.Score.AutoSize = true;
+            this.Score.Location = new System.Drawing.Point(201, 373);
+            this.Score.Name = "Score";
+            this.Score.Size = new System.Drawing.Size(48, 15);
+            this.Score.TabIndex = 6;
+            this.Score.Text = "Score :  ";
             // 
-            // label3
+            // head
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(281, 497);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "0";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.head.Image = global::Projet_Purple.Properties.Resources.Mateo_crop2;
+            this.head.Location = new System.Drawing.Point(404, 231);
+            this.head.Name = "head";
+            this.head.Size = new System.Drawing.Size(25, 24);
+            this.head.TabIndex = 7;
+            this.head.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1034, 523);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(905, 392);
+            this.Controls.Add(this.head);
+            this.Controls.Add(this.Score);
             this.Controls.Add(this.Timer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Keypress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.head)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,7 +164,8 @@
         private Button button3;
         private Label label1;
         private Label Timer;
-        private Label label2;
-        private Label label3;
+        private Label Score;
+        private PictureBox head;
+        private System.Windows.Forms.Timer timer1;
     }
 }
