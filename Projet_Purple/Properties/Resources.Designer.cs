@@ -73,6 +73,26 @@ namespace Projet_Purple.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Donut_1 {
+            get {
+                object obj = ResourceManager.GetObject("Donut_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Donuts_PNG_File {
+            get {
+                object obj = ResourceManager.GetObject("Donuts-PNG-File", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mateo_crop2 {
             get {
                 object obj = ResourceManager.GetObject("Mateo_crop2", resourceCulture);

@@ -21,21 +21,42 @@ namespace Projet_Purple
 
         bool left = false, right = false;
         bool top = false, down = false;
+
+        PictureBox head = new PictureBox();
         PictureBox pic = new PictureBox();
         List<PictureBox> tails = new List<PictureBox>();
-
+        
 
         System.Timers.Timer t;
         int h, m, s;
         public Form2()
         {
             InitializeComponent();
-            t = new System.Timers.Timer();
-            t.Interval = 1000;
-            t.Elapsed += OnTimeEvent;
+            Custom_Timer();
+            spawnHead();
+            
         }
 
-        
+        private void map()
+        {
+            if (head.Location.X > pictureBox1.Width - head.Width)
+            {
+                head.Location = new Point(0, head.Location.Y);
+            }
+            if (head.Location.X < 0)
+            {
+                head.Location = new Point(pictureBox1.Width - head.Width, head.Location.Y);
+            }
+            if (head.Location.Y > pictureBox1.Height - head.Height)
+            {
+                head.Location = new Point(head.Location.X, 0);
+            }
+            if (head.Location.Y < 0)
+            {
+                head.Location = new Point(head.Location.X, pictureBox1.Height - head.Height);
+            }
+           
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             timer1.Start();
@@ -62,15 +83,21 @@ namespace Projet_Purple
             }));
         }
 
-
+        private void Custom_Timer()
+        {
+            t = new System.Timers.Timer(1000);
+            t.Elapsed += OnTimeEvent;
+            t.AutoReset = true;
+            t.Enabled = true;
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
         }
            
         private void button1_Click(object sender, EventArgs e)
         {
-            t.Start();
             spawnFood();
+            t.Start();   
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -101,6 +128,7 @@ namespace Projet_Purple
                 for (int i = 1; i < tails.Count; i++)
                 {
                     tails[i].Location = tails[i - 1].Location;
+                    
                 }
                 tails[0].Location = head.Location;
             }
@@ -111,70 +139,107 @@ namespace Projet_Purple
             PictureBox tail = new PictureBox();
             tail.Name = "tail" + Score.ToString();
             tail.BackColor = Color.Brown;
-            tail.Width = 10;
-            tail.Height = 10;
-            this.Controls.Add(tail);
+            tail.Width = 35;
+            tail.Height = 35;
+            Controls.Add(tail);
+            tail.BringToFront();
             return tail;
         }
 
+        private void spawnHead()
+        {
+            head.Name = "head";
+            head.Image = Properties.Resources.Mateo_crop2;
+            head.SizeMode = PictureBoxSizeMode.StretchImage;
+            head.Width = 35;
+            head.Height = 35;
+            Controls.Add(head);
+            head.Location = new Point(350, 348);
+            head.BringToFront();
+
+        }
         private void spawnFood()
         {
             Random rnd = new Random();
-            int rndLocationX = rnd.Next(10, 50);
-            int rndLocationY = rnd.Next(10, 50);
-            pic.BackColor = Color.Red;
-            pic.Height = 10;
-            pic.Width = 10;
-            this.Controls.Add(pic);
-            if (rndLocationX >= 200)
+            int rndLocationX = rnd.Next(10, pictureBox1.Size.Width / 10);
+            int rndLocationY = rnd.Next(10, pictureBox1.Size.Height / 10 );
+            pic.Image = Properties.Resources.Donuts_PNG_File;
+            pic.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic.BackColor = Color.Transparent;
+            pic.Height = 20;
+            pic.Width = 20;
+            Controls.Add(pic);
+            if (rndLocationX >= pictureBox1.Size.Width)
             {
-                rndLocationX -= 10;
+                rndLocationX = - 10;
             }
-            if (rndLocationY >= 200)
+            if (rndLocationY >= pictureBox1.Size.Height)
             {
-                rndLocationY -= 10;
+                rndLocationY = -10;
             }
-            pic.Location = new Point(rndLocationX * 10, rndLocationY * 10);
+            pic.Location = new Point(rndLocationX * 10, rndLocationY * 10) ;
+            pic.BringToFront();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
         }
 
         private void Keypress(object sender, KeyPressEventArgs e)
         {
-            if (((e.KeyChar.ToString() == "a") || (e.KeyChar.ToString() == "A")) && (right == false))
+            
+            if (((e.KeyChar.ToString() == "q") || (e.KeyChar.ToString() == "Q")))
             {
                 right = false;
                 top = false;
                 down = false;
                 left = true;
             }
-            else if (((e.KeyChar.ToString() == "d") || (e.KeyChar.ToString() == "D")) && (left == false))
+            else if (((e.KeyChar.ToString() == "d") || (e.KeyChar.ToString() == "D")) )
             {
                 top = false;
                 down = false;
                 left = false;
                 right = true;
             }
-            else if (((e.KeyChar.ToString() == "w") || (e.KeyChar.ToString() == "W")) && (down == false))
+            else if (((e.KeyChar.ToString() == "z") || (e.KeyChar.ToString() == "Z")))
             {
                 down = false;
                 left = false;
                 right = false;
                 top = true;
             }
-            else if (((e.KeyChar.ToString() == "s") || (e.KeyChar.ToString() == "S")) && (top == false))
+            else if (((e.KeyChar.ToString() == "s") || (e.KeyChar.ToString() == "S")))
             {
                 top = false;
                 left = false;
                 right = false;
                 down = true;
+            }
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eat()
+        {
+            if (right = true)
+            {
                 
             }
         }
 
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             //ticks every 1 sec
-            if (pic.Location == head.Location)
+            timer1.Interval = 200;
+            map();
+            Debug.WriteLine(pic.Location);
+            Debug.WriteLine(head.Location);
+            if (head.Bounds.IntersectsWith(pic.Bounds))
             {
                 score++;
                 spawnFood();
@@ -201,9 +266,10 @@ namespace Projet_Purple
                 int d = head.Location.Y + head.Height;
                 head.Location = new Point(head.Location.X, d);
             }
-            Score.Text = Score.ToString();
+            Score.Text = "Score : " + score;
         }
-
+        
+        
         
         private void pictureBox2_Click(object sender, EventArgs e)
         {
