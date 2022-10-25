@@ -22,12 +22,25 @@ namespace Projet_Purple
 
         }
 
+        
+
+
         private void Commencer_Click_1(object sender, EventArgs e)
         {
             //open new form
             Form2 f2 = new Form2();//Create the new form
             this.Hide();
             f2.Show();//display Form2 to the user
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
