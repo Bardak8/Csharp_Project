@@ -161,7 +161,6 @@ namespace Projet_Purple
             tail.BackColor = Color.Gold;
             tail.Width = 35;
             tail.Height = 35;
-            tail.Location = new Point(0, 0);
             Controls.Add(tail);
             tail.BringToFront();
             return tail;
@@ -182,23 +181,30 @@ namespace Projet_Purple
         private void spawnFood()
         {
             Random rnd = new Random();
-            int rndLocationX = rnd.Next(10, pictureBox1.Size.Width / 11);
-            int rndLocationY = rnd.Next(10, pictureBox1.Size.Height / 11);
-            pic.Image = Properties.Resources.Donuts_PNG_File ;
-            pic.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic.Height = 30;
-            pic.Width = 30;
-            Controls.Add(pic);
-            if (rndLocationX >= pictureBox1.Size.Width)
+            int rndLocationX = rnd.Next(10, (int)(pictureBox1.Size.Width * 0.9)) ;
+            int rndLocationY = rnd.Next(10, (int)(pictureBox1.Size.Height * 0.9));
+            if ((rndLocationX == head.Location.X && rndLocationY == head.Location.Y) || (tails.Any(tails => tails.Location == pic.Location)))
             {
-                rndLocationX = -10;
+                spawnFood();
             }
-            if (rndLocationY >= pictureBox1.Size.Height)
+            else
             {
-                rndLocationY = -10;
+                pic.Image = Properties.Resources.Donuts_PNG_File;
+                pic.SizeMode = PictureBoxSizeMode.StretchImage;
+                pic.Height = 35;
+                pic.Width = 35;
+                Controls.Add(pic);
+                if (rndLocationX >= pictureBox1.Size.Width)
+                {
+                    rndLocationX = -10;
+                }
+                if (rndLocationY >= pictureBox1.Size.Height)
+                {
+                    rndLocationY = -10;
+                }
+                pic.Location = new Point(rndLocationX, rndLocationY);
+                pic.BringToFront();
             }
-            pic.Location = new Point(rndLocationX * 10, rndLocationY * 10);
-            pic.BringToFront();
         }
 
      

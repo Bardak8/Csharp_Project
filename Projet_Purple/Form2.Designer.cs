@@ -44,10 +44,9 @@
             // 
             this.pictureBox1.BackgroundImage = global::Projet_Purple.Properties.Resources.AnyConv_com__abstract_futuristic_landscape_1980s_style_260nw_1139046833;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(767, 379);
+            this.pictureBox1.Size = new System.Drawing.Size(860, 505);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
@@ -55,10 +54,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(789, 26);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(902, 35);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 69);
+            this.button1.Size = new System.Drawing.Size(123, 92);
             this.button1.TabIndex = 1;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
@@ -68,10 +66,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(789, 125);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(902, 167);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 67);
+            this.button2.Size = new System.Drawing.Size(123, 89);
             this.button2.TabIndex = 2;
             this.button2.Text = "Stop";
             this.button2.UseVisualStyleBackColor = true;
@@ -80,10 +77,9 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(789, 231);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(902, 308);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 69);
+            this.button3.Size = new System.Drawing.Size(126, 92);
             this.button3.TabIndex = 3;
             this.button3.Text = "Return to menu ";
             this.button3.UseVisualStyleBackColor = true;
@@ -92,27 +88,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(479, 388);
+            this.label1.Location = new System.Drawing.Point(547, 517);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 15);
+            this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Timer :";
             // 
             // Timer
             // 
             this.Timer.AutoSize = true;
-            this.Timer.Location = new System.Drawing.Point(540, 388);
+            this.Timer.Location = new System.Drawing.Point(617, 517);
             this.Timer.Name = "Timer";
-            this.Timer.Size = new System.Drawing.Size(49, 15);
+            this.Timer.Size = new System.Drawing.Size(63, 20);
             this.Timer.TabIndex = 5;
             this.Timer.Text = "00.00.00";
             // 
             // Score
             // 
             this.Score.AutoSize = true;
-            this.Score.Location = new System.Drawing.Point(200, 388);
+            this.Score.Location = new System.Drawing.Point(229, 517);
             this.Score.Name = "Score";
-            this.Score.Size = new System.Drawing.Size(48, 15);
+            this.Score.Size = new System.Drawing.Size(61, 20);
             this.Score.TabIndex = 6;
             this.Score.Text = "Score :  ";
             this.Score.Click += new System.EventHandler(this.Score_Click);
@@ -124,10 +120,10 @@
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(905, 412);
+            this.ClientSize = new System.Drawing.Size(1034, 549);
             this.Controls.Add(this.Score);
             this.Controls.Add(this.Timer);
             this.Controls.Add(this.label1);
@@ -135,7 +131,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
