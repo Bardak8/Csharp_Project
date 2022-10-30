@@ -22,9 +22,7 @@ namespace Projet_Purple
         int score = 0;
         Button Ov_button = new Button();
         Button Ov_button1 = new Button();
-        Panel panel = new Panel();
-        RichTextBox name = new RichTextBox();
-        Label Text_name = new Label();
+        Panel panel = new Panel();      
         bool left = false, right = false;
         bool top = false, down = false;
 
@@ -290,45 +288,31 @@ namespace Projet_Purple
 
             panel.Location = new Point(250, 120);
             panel.Width = 300;
-            panel.Height = 200;
+            panel.Height = 150;
                 
             Controls.Add(panel);
             panel.Controls.Add(Ov_button);
             Ov_button.Click += Ov_button_CLick;
             panel.Controls.Add(Ov_button1);
             Ov_button1.Click += Ov_button1_Click;
-            panel.Controls.Add(name);
-            panel.Controls.Add(Text_name);
             panel.BringToFront();
            
             Ov_button.BackColor = Color.Red;
             panel.BackColor = Color.Gray;
-            name.BackColor = Color.Yellow;
             panel.BorderStyle = BorderStyle.FixedSingle;
             Ov_button.Text = "Retourner au jeu";
             Ov_button1.BackColor = Color.Blue;
             Ov_button1.Text = "Revenir au menu";
-            Text_name.BackColor = Color.Green;
-            Text_name.Text = "Entrez votre nom";
             Ov_button.Width= 100;
             Ov_button.Height = 50;
-            name.Width = 80;
-            name.Height = 25;
-            Text_name.Width = 100;
-            Text_name.Height = 25;
             Ov_button1.Width = 100;
             Ov_button1.Height = 50;
-            Ov_button.Location = new Point(40,25);
-            Ov_button1.Location = new Point(170, 25);
-            name.Location = new Point(113, 130);
-            Text_name.Location = new Point(105, 95);
+            Ov_button.Location = new Point(40,35);
+            Ov_button1.Location = new Point(170, 35);
+            
         }
         
 
-        private void Score_Taker()
-        {
-
-        }
 
         private void Ov_button_CLick(object sender, EventArgs e) {
 
