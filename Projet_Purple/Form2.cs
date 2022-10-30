@@ -309,7 +309,7 @@ namespace Projet_Purple
             Ov_button1.Click += Ov_button1_Click;
             panel.BringToFront();
 
-
+            Game_over_label.Width = 150;
             Game_over_label.Text = "GAME OVER";
             Ov_button.BackColor = Color.Green;
             panel.BackColor = Color.Gray;
@@ -317,12 +317,13 @@ namespace Projet_Purple
             Ov_button.Text = "Retourner au jeu";
             Ov_button1.BackColor = Color.Blue;
             Ov_button1.Text = "Revenir au menu";
+            Game_over_label.Font = new Font("Arial", 14, FontStyle.Bold);
             Game_over_label.ForeColor = Color.Red;
             Ov_button.Width= 100;
             Ov_button.Height = 50;
             Ov_button1.Width = 100;
             Ov_button1.Height = 50;
-            Game_over_label.Location = new Point(90, 20);
+            Game_over_label.Location = new Point(85, 20);
             Ov_button.Location = new Point(40,60);
             Ov_button1.Location = new Point(170, 60);
             
