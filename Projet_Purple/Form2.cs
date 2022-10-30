@@ -26,6 +26,7 @@ namespace Projet_Purple
         bool left = false, right = false;
         bool top = false, down = false;
 
+        Label Game_over_label = new Label();
         PictureBox head = new PictureBox();
         PictureBox pic = new PictureBox();
         List<PictureBox> tails = new List<PictureBox>();
@@ -159,8 +160,8 @@ namespace Projet_Purple
             PictureBox tail = new PictureBox();
             tail.Name = "tail" + Score.ToString();
             tail.BackColor = Color.Gold;
-            tail.Width = 35;
-            tail.Height = 35;
+            tail.Width = head.Width;
+            tail.Height = head.Height;
             Controls.Add(tail);
             tail.BringToFront();
             return tail;
@@ -181,9 +182,9 @@ namespace Projet_Purple
         private void spawnFood()
         {
             Random rnd = new Random();
-            int rndLocationX = rnd.Next(10, (int)(pictureBox1.Size.Width * 0.9)) ;
-            int rndLocationY = rnd.Next(10, (int)(pictureBox1.Size.Height * 0.9));
-            if ((rndLocationX == head.Location.X && rndLocationY == head.Location.Y) || (tails.Any(tails => tails.Location == pic.Location)))
+            int rndLocationX = rnd.Next(30, (int)(pictureBox1.Size.Width * 0.9)) ;
+            int rndLocationY = rnd.Next(30, (int)(pictureBox1.Size.Height * 0.9));
+            if (rndLocationX > head.Location.X -50 && rndLocationX < head.Location.X  + 50  && rndLocationY > head.Location.Y - 50 && rndLocationY < head.Location.Y + 50)
             {
                 spawnFood();
             }
@@ -191,8 +192,8 @@ namespace Projet_Purple
             {
                 pic.Image = Properties.Resources.Donuts_PNG_File;
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
-                pic.Height = 35;
-                pic.Width = 35;
+                pic.Height = 25;
+                pic.Width = 25;
                 Controls.Add(pic);
                 if (rndLocationX >= pictureBox1.Size.Width)
                 {
@@ -203,6 +204,9 @@ namespace Projet_Purple
                     rndLocationY = -10;
                 }
                 pic.Location = new Point(rndLocationX, rndLocationY);
+                if (tails.Any(tails => tails.Bounds.IntersectsWith(pic.Bounds))){
+                    spawnFood();
+                } 
                 pic.BringToFront();
             }
         }
@@ -295,26 +299,32 @@ namespace Projet_Purple
             panel.Location = new Point(250, 120);
             panel.Width = 300;
             panel.Height = 150;
-                
+
+
             Controls.Add(panel);
             panel.Controls.Add(Ov_button);
+            panel.Controls.Add(Game_over_label);
             Ov_button.Click += Ov_button_CLick;
             panel.Controls.Add(Ov_button1);
             Ov_button1.Click += Ov_button1_Click;
             panel.BringToFront();
-           
-            Ov_button.BackColor = Color.Red;
+
+
+            Game_over_label.Text = "GAME OVER";
+            Ov_button.BackColor = Color.Green;
             panel.BackColor = Color.Gray;
             panel.BorderStyle = BorderStyle.FixedSingle;
             Ov_button.Text = "Retourner au jeu";
             Ov_button1.BackColor = Color.Blue;
             Ov_button1.Text = "Revenir au menu";
+            Game_over_label.ForeColor = Color.Red;
             Ov_button.Width= 100;
             Ov_button.Height = 50;
             Ov_button1.Width = 100;
             Ov_button1.Height = 50;
-            Ov_button.Location = new Point(40,35);
-            Ov_button1.Location = new Point(170, 35);
+            Game_over_label.Location = new Point(90, 20);
+            Ov_button.Location = new Point(40,60);
+            Ov_button1.Location = new Point(170, 60);
             
         }
         
