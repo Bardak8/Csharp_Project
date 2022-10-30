@@ -13,8 +13,7 @@ J’ai choisi le Snake, tout simplement car c’était celui que presque personn
                                                     
                                                     
 Mes objectifs pour ce jeu étaient dans un premier plan d’avoir un jeu fonctionnel, rajouté quelque option drôle, comme la tête du Snake qui a été remplacé
-par la tête d’un ami de la classe qui m’a donné son autorisation au préalable et enfin rajouté quelque option un peu plus technique
-pour savoir jusqu’où je pouvais aller comme un Leaderboard.
+par la tête d’un ami de la classe qui m’a donné son autorisation au préalable et enfin rajouté quelque option un peu plus technique, je souhaitais aussi faire un pong en 2eme jeu.
 
 
                                                Difficultés rencontrées
@@ -30,6 +29,7 @@ et la localisation et des queues pour qu’elles se suivent.
 Et le dernier point ou j’ai eu de grosse difficulté a été Windows Forms en lui-même,
 car cela n’a vraiment pas été simple pour moi de bien calibré les images par apport au fond et au coordonné.
 
+J'ai aussi eu des difficultés avec le temps que j'ai mal jaugé, j'ai donc décidé de faire le pong, comme jeu optionnel et je le rendrais pour le 7 novembre.
 
                                                    Thème Du Jeu
                                                     
@@ -39,3 +39,13 @@ car cela n’a vraiment pas été simple pour moi de bien calibré les images pa
  
  
                                                     Features
+
+Pour le Snake, les features sont 
+
+- De pouvoir se déplacer en haut, a gauche, a droite et en bas avec les touches Z,Q,S,D.
+- De pouvoir mangé de la nourriture généré aléatoirement dans la zone du jeu et de pouvoir monté son score.
+- Un timer fait a la main.
+- Si la tete du snake touche un bord ou si il touche une queue, le joueur a perdu.
+- Un menu avec une page aide, une page pour le snake et une page pour le pong disponible plus tard.
+- La tete du snake a été remplacé par un png.
+- possibilité de mettre en pause le jeu a tout moment.
