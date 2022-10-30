@@ -49,3 +49,4 @@ Pour le Snake, les features sont
 - Un menu avec une page aide, une page pour le snake et une page pour le pong disponible plus tard.
 - La tete du snake a été remplacé par un png.
 - possibilité de mettre en pause le jeu a tout moment.
+- Impossibilité que la nourriture puissent apparaitre sur la queue.
