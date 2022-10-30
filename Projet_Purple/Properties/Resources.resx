@@ -118,16 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Donut_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Donut_1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sans titre1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sans titre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AnyConv.com__abstract-futuristic-landscape-1980s-style-260nw-1139046833" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AnyConv.com__abstract-futuristic-landscape-1980s-style-260nw-1139046833.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IMG_20221029_144458" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_20221029_144458.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Mateo_crop2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mateo_crop2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Donuts-PNG-File" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Donuts-PNG-File.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AnyConv.com__abstract-futuristic-landscape-1980s-style-260nw-1139046833" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AnyConv.com__abstract-futuristic-landscape-1980s-style-260nw-1139046833.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Donut_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Donut_1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sans titre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sans titre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Donut-Transparent-Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Donut-Transparent-Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

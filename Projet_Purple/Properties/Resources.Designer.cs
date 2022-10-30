@@ -83,6 +83,16 @@ namespace Projet_Purple.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Donut_Transparent_Background {
+            get {
+                object obj = ResourceManager.GetObject("Donut-Transparent-Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Donuts_PNG_File {
             get {
                 object obj = ResourceManager.GetObject("Donuts-PNG-File", resourceCulture);
@@ -93,9 +103,39 @@ namespace Projet_Purple.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IMG_20221029_144458 {
+            get {
+                object obj = ResourceManager.GetObject("IMG_20221029_144458", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mateo_crop2 {
             get {
                 object obj = ResourceManager.GetObject("Mateo_crop2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sans_titre {
+            get {
+                object obj = ResourceManager.GetObject("Sans titre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sans_titre1 {
+            get {
+                object obj = ResourceManager.GetObject("Sans titre1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

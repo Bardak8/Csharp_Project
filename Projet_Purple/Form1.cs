@@ -29,7 +29,7 @@ namespace Projet_Purple
         {
             //open new form
             Form2 f2 = new Form2();//Create the new form
-            this.Hide();
+            Hide();
             f2.Show();//display Form2 to the user
         }
 
@@ -41,6 +41,13 @@ namespace Projet_Purple
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();//Create the new form
+            Hide();
+            f3.Show();//display Form2 to the user
         }
     }
 }

@@ -17,11 +17,14 @@ namespace Projet_Purple
 {
     public partial class Form2 : Form
     {
-
+        bool Gamestate  = false;
+        bool Gameover = false;
         int score = 0;
         Button Ov_button = new Button();
         Button Ov_button1 = new Button();
         Panel panel = new Panel();
+        RichTextBox name = new RichTextBox();
+        Label Text_name = new Label();
         bool left = false, right = false;
         bool top = false, down = false;
 
@@ -34,35 +37,37 @@ namespace Projet_Purple
         int h, m, s;
         public Form2()
         {
+            spawnHead();
             InitializeComponent();
             Custom_Timer();
-            spawnHead();
             timer1.Stop();
+            t.Stop();
+            tails.Clear();
         }
 
         private void map()
         {
-            if (head.Location.X > pictureBox1.Width - head.Width)
+            if (right == true && head.Location.X > pictureBox1.Width - head.Width * 1.95)
             {
-                head.Location = new Point(0, head.Location.Y);
+                Game_Over();
             }
-            if (head.Location.X < 0)
+            if (left == true && head.Location.X < pictureBox1.Left + head.Width * 1.6) 
             {
-                head.Location = new Point(pictureBox1.Width - head.Width, head.Location.Y);
+                Game_Over();
             }
-            if (head.Location.Y > pictureBox1.Height - head.Height)
+            if (down == true && head.Location.Y > pictureBox1.Height - head.Height *2 )
             {
-                head.Location = new Point(head.Location.X, 0);
+                Game_Over();
             }
-            if (head.Location.Y < 0)
+            if (top == true && head.Location.Y < pictureBox1.Top + head.Width)
             {
-                head.Location = new Point(head.Location.X, pictureBox1.Height - head.Height);
+                Game_Over();
             }
 
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
         private void OnTimeEvent(object sender, ElapsedEventArgs e)
         {
@@ -99,16 +104,29 @@ namespace Projet_Purple
 
         private void button1_Click(object sender, EventArgs e)
         {
-            spawnFood();
-            t.Start();
-            timer1.Start();
+            if (Gameover == false)
+            {
+                if (Gamestate == false)
+                {
+                    spawnFood();
+                    t.Start();
+                    timer1.Start();
+                    Gamestate = true;
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            t.Stop();
-            timer1.Stop();
-
+            if (Gameover == false)
+            {
+                if (Gamestate == true)
+                {
+                    t.Stop();
+                    timer1.Stop();
+                    Gamestate = false;
+                }
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -154,25 +172,24 @@ namespace Projet_Purple
         private void spawnHead()
         {
             head.Name = "head";
-            head.Image = Properties.Resources.Mateo_crop2;
+            head.Image = Properties.Resources.IMG_20221029_144458 ;
             head.SizeMode = PictureBoxSizeMode.StretchImage;
             head.Width = 35;
             head.Height = 35;
             Controls.Add(head);
-            head.Location = new Point(350, 348);
+            head.Location = new Point(150, 140);
             head.BringToFront();
-
+                
         }
         private void spawnFood()
         {
             Random rnd = new Random();
-            int rndLocationX = rnd.Next(10, pictureBox1.Size.Width / 10);
-            int rndLocationY = rnd.Next(10, pictureBox1.Size.Height / 10);
-            pic.Image = Properties.Resources.Donuts_PNG_File;
+            int rndLocationX = rnd.Next(10, pictureBox1.Size.Width / 11);
+            int rndLocationY = rnd.Next(10, pictureBox1.Size.Height / 11);
+            pic.Image = Properties.Resources.Donuts_PNG_File ;
             pic.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic.BackColor = Color.Transparent;
-            pic.Height = 35;
-            pic.Width = 35;
+            pic.Height = 30;
+            pic.Width = 30;
             Controls.Add(pic);
             if (rndLocationX >= pictureBox1.Size.Width)
             {
@@ -186,6 +203,8 @@ namespace Projet_Purple
             pic.BringToFront();
         }
 
+     
+
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
@@ -195,8 +214,8 @@ namespace Projet_Purple
         {
             bool cond1 = (tails.Count > 0) && (tails[0]?.Location.X < head.Location.X);
             bool cond2 = (tails.Count > 0) && (tails[0]?.Location.X > head.Location.X);
-            bool cond3 = (tails.Count > 0) && (tails[0]?.Location.Y < head.Location.Y);
-            bool cond4 = (tails.Count > 0) && (tails[0]?.Location.Y > head.Location.Y);
+            bool cond3 = (tails.Count > 0) && (tails[0]?.Location.Y > head.Location.Y);
+            bool cond4 = (tails.Count > 0) && (tails[0]?.Location.Y < head.Location.Y);
 
             if (cond1 & ((e.KeyChar.ToString() == "q") || (e.KeyChar.ToString() == "Q")))
             {
@@ -233,7 +252,7 @@ namespace Projet_Purple
                 down = false;
                 left = false;
             }
-            else if (((e.KeyChar.ToString() == "s") || (e.KeyChar.ToString() == "SQ")))
+            else if (((e.KeyChar.ToString() == "s") || (e.KeyChar.ToString() == "S")))
             {
                 right = false;
                 top = false;
@@ -247,7 +266,7 @@ namespace Projet_Purple
                 down = true;
                 left = false;
             }
-            else if (((e.KeyChar.ToString() == "z") || (e.KeyChar.ToString() == "ZQ")))
+            else if (((e.KeyChar.ToString() == "z") || (e.KeyChar.ToString() == "Z")))
             {
                 right = false;
                 top = true;
@@ -261,38 +280,71 @@ namespace Projet_Purple
 
         }
 
-        private void eat()
-        {
-            if (right = true)
-            {
-
-            }
-        }
 
         private void Game_Over()
         {
-            
-            if (tails.Any(tails => tails.Location == head.Location))
-            {
-                t.Stop();
-                timer1.Stop();
+            Gameover = true;
+            Gamestate = false;
+            t.Stop();
+            timer1.Stop();
 
-                panel.Location = new Point(250, 250);
-                panel.Width = 100;
-                panel.Height = 50;
+            panel.Location = new Point(250, 120);
+            panel.Width = 300;
+            panel.Height = 200;
                 
-                Controls.Add(panel);
-                panel.Controls.Add(Ov_button);
-                panel.Controls.Add(Ov_button1);
-                panel.BringToFront();
-            }
-            
+            Controls.Add(panel);
+            panel.Controls.Add(Ov_button);
+            Ov_button.Click += Ov_button_CLick;
+            panel.Controls.Add(Ov_button1);
+            Ov_button1.Click += Ov_button1_Click;
+            panel.Controls.Add(name);
+            panel.Controls.Add(Text_name);
+            panel.BringToFront();
+           
+            Ov_button.BackColor = Color.Red;
+            panel.BackColor = Color.Gray;
+            name.BackColor = Color.Yellow;
+            panel.BorderStyle = BorderStyle.FixedSingle;
+            Ov_button.Text = "Retourner au jeu";
+            Ov_button1.BackColor = Color.Blue;
+            Ov_button1.Text = "Revenir au menu";
+            Text_name.BackColor = Color.Green;
+            Text_name.Text = "Entrez votre nom";
+            Ov_button.Width= 100;
+            Ov_button.Height = 50;
+            name.Width = 80;
+            name.Height = 25;
+            Text_name.Width = 100;
+            Text_name.Height = 25;
+            Ov_button1.Width = 100;
+            Ov_button1.Height = 50;
+            Ov_button.Location = new Point(40,25);
+            Ov_button1.Location = new Point(170, 25);
+            name.Location = new Point(113, 130);
+            Text_name.Location = new Point(105, 95);
         }
         
-        private void Ov_Button_CLick(object sender, EventArgs e) {
-            Controls.Remove(panel);
+
+        private void Score_Taker()
+        {
+
         }
-        private void Ov_Button1_Click(object sender, EventArgs e)
+
+        private void Ov_button_CLick(object sender, EventArgs e) {
+
+            Controls.Remove(panel);
+            Close();
+            Form2 f2 = new Form2();
+            f2.Show();
+            
+        }
+
+        private void Score_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ov_button1_Click(object sender, EventArgs e)
         {
             Controls.Remove(panel);
             Form1 f1 = new Form1();//Create the new form
@@ -301,12 +353,13 @@ namespace Projet_Purple
         }
             private void timer1_Tick(object sender, EventArgs e)
         {
-            //ticks every 1 sec
-            timer1.Interval = 200;
+            //ticks every 0.3 sec
+            timer1.Interval = 300;
             map();
-            Game_Over();
-            Debug.WriteLine(pic.Location);
-            Debug.WriteLine(head.Location);
+            if (tails.Any(tails => tails.Location == head.Location))
+            {
+                Game_Over();
+            }
             if (head.Bounds.IntersectsWith(pic.Bounds))
             {
                 score++;
