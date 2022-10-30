@@ -41,6 +41,7 @@ namespace Projet_Purple
             timer1.Stop();
             t.Stop();
             tails.Clear();
+            spawnFood();
         }
 
         private void map()
@@ -106,7 +107,6 @@ namespace Projet_Purple
             {
                 if (Gamestate == false)
                 {
-                    spawnFood();
                     t.Start();
                     timer1.Start();
                     Gamestate = true;

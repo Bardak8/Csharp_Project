@@ -75,3 +75,4 @@ C:\Users\maxim\source\repos\c#\Csharp_Project\Csharp_Project\Projet_Purple\obj\D
 C:\Users\maxim\source\repos\c#\Csharp_Project\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.genruntimeconfig.cache
 C:\Users\maxim\source\repos\c#\Csharp_Project\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\ref\Projet_Purple.dll
 C:\Users\maxim\source\repos\c#\Csharp_Project\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.Form3.resources
+C:\Users\maxim\source\repos\c#\Csharp_Project\Projet_Purple\obj\Debug\net6.0-windows\Projet_Purple.Form3.resources
