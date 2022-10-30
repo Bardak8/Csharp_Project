@@ -35,7 +35,9 @@ namespace Projet_Purple
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Form4 f4 = new Form4();
+            Hide();
+            f4.Show();
         }
         
         private void button2_Click(object sender, EventArgs e)
