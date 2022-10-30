@@ -1,7 +1,7 @@
 # Csharp_Project
 
 
-                                                    Projet Purple
+                                                  Projet Purple
                                                     
                                                      
                                                     Le Projet
@@ -19,7 +19,7 @@ par la tête d’un ami de la classe qui m’a donné son autorisation au préal
 pour savoir jusqu’où je pouvais aller comme un Leaderboard.
 
 
-                                                    Difficultés rencontrées
+                                               Difficultés rencontrées
                                                     
                                                     
 Les difficultés que j’ai rencontrées ont été, dans un premier pour débuter le jeu car je ne connaissais pas Windows Forms 
@@ -33,7 +33,7 @@ Et le dernier point ou j’ai eu de grosse difficulté a été Windows Forms en 
 car cela n’a vraiment pas été simple pour moi de bien calibré les images par apport au fond et au coordonné.
 
 
-                                                    Thème Du Jeu
+                                                   Thème Du Jeu
                                                     
                                                     
  Mis à part la tête du Snake, il n’y a pas vraiment de thème a proprement parlé.
