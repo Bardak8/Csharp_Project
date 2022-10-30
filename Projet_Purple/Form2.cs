@@ -309,8 +309,9 @@ namespace Projet_Purple
             Ov_button1.Click += Ov_button1_Click;
             panel.BringToFront();
 
-            Game_over_label.Width = 150;
+            Game_over_label.Width = 250;
             Game_over_label.Text = "GAME OVER";
+            Game_over_label.TextAlign = ContentAlignment.MiddleCenter;
             Ov_button.BackColor = Color.Green;
             panel.BackColor = Color.Gray;
             panel.BorderStyle = BorderStyle.FixedSingle;
@@ -323,7 +324,7 @@ namespace Projet_Purple
             Ov_button.Height = 50;
             Ov_button1.Width = 100;
             Ov_button1.Height = 50;
-            Game_over_label.Location = new Point(85, 20);
+            Game_over_label.Location = new Point(25, 20);
             Ov_button.Location = new Point(40,60);
             Ov_button1.Location = new Point(170, 60);
             
